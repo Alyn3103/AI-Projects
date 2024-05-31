@@ -8,6 +8,7 @@ from sklearn.feature_extraction.text import CountVectorizer
 nb_classifier = joblib.load('naive_bayes_model.pkl')
 vectorizer = joblib.load('count_vectorizer.pkl')
 
+
 def predict_spam(input_text):
     preprocessed_text = preprocess(input_text)
     input_vectorized = vectorizer.transform([preprocessed_text])
@@ -17,9 +18,11 @@ def predict_spam(input_text):
     else:
         print("The input text is not classified as spam.")
 
+
 def preprocess(text):
     preprocessed_text = text.lower()
     return preprocessed_text
+
 
 # def check_latest_email():
 #     mail = imaplib.IMAP4_SSL('imap.gmail.com')
@@ -32,10 +35,10 @@ def preprocess(text):
 #     msg = BytesParser(policy=policy.default).parsebytes(raw_email)
 #     subject = msg['subject']
 #     body = msg.get_body(preferencelist=('plain')).get_content()
-    
+
 #     # Close the connection to the email server
 #     mail.logout()
-    
+
 #     return subject, body
 
 # Check the latest email 
