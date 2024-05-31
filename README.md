@@ -1,2 +1,5 @@
 # MachineLearningPractice
-Random Machine learning codes of various diificulty
+Random AI Projects consisiting of NLP/CV/ML/DL/DS of Various Difficulty
+Check the Index Below:
+
+
